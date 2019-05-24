@@ -17,12 +17,12 @@ class Contact extends Component {
     return (
       <div style={{ margin: '1rem', padding: '1rem', border: '1px solid deepskyblue', display: 'block' }}>
         <h3>Title: {this._state.title}</h3>
-        <p>Local Message: {this._state.myMessage}</p>
-        <p>Global Message: {messageState.myGlobalMessage}</p>
 
+        <p>Local Message: {this._state.myMessage}</p>
         <label>Local Component Message: </label>
         <input type='text' placeholder='Type a message here' onChange={changeLocalMessage(this)} /><br />
 
+        <p>Global Message: {messageState.myGlobalMessage}</p>
         <label>Global App Message: </label>
         <input type='text' placeholder='Type a message here' onChange={changeGlobalMessage(this)} />
 
