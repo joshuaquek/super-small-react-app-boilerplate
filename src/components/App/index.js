@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom'
 import { store, view } from 'react-easy-state'
 
+import TopMenu from '../TopMenu'
 import Home from '../../pages/Home'
 import About from '../../pages/About'
 import Contact from '../../pages/Contact'
@@ -14,11 +15,16 @@ class App extends Component {
 
   render () {
     return (
-      <Switch>
-        <Route path='/' component={Home} />
-        <Route path='/about' component={About} />
-        <Route path='/contact' component={Contact} />
-      </Switch>
+      <BrowserRouter>
+        <div>
+          <TopMenu />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/about' component={About} />
+            <Route exact path='/contact' component={Contact} />
+          </Switch>
+        </div>
+      </BrowserRouter>
     )
   }
 }
