@@ -1,15 +1,16 @@
 {
-  "name": "app",
+  "name": "App",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --progress --open --port 3030",
-    "build": "webpack"
+    "prod": "webpack; http-server ./dist -o",
+    "export": "webpack"
   },
-  "repository": "none",
+  "repository": "None",
   "keywords": [],
-  "author": "developer",
+  "author": "Developer",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
