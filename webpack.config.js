@@ -33,6 +33,10 @@ module.exports = (env) => {
               cacheDirectory: true
             }
           }
+        },
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader']
         }
       ]
     },
