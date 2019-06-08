@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom'
+import { Switch, Route, withRouter } from 'react-router-dom'
 import { store, view } from 'react-easy-state'
 
 import TopMenu from '../TopMenu'
@@ -15,18 +15,16 @@ class App extends Component {
 
   render () {
     return (
-      <BrowserRouter>
-        <div>
-          <TopMenu />
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/about' component={About} />
-            <Route exact path='/contact' component={Contact} />
-          </Switch>
-        </div>
-      </BrowserRouter>
+      <div>
+        <TopMenu />
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/about' component={About} />
+          <Route exact path='/contact' component={Contact} />
+        </Switch>
+      </div>
     )
   }
 }
 
-export default view(App)
+export default withRouter(view(App))

@@ -24,7 +24,7 @@ class Home extends Component {
 
         <p>Global Message: {messageState.myGlobalMessage}</p>
         <label>Global App Message: </label>
-        <input type='text' placeholder='Type a message here' onChange={changeGlobalMessage(this)} />
+        <input type='text' defaultValue={messageState.myGlobalMessage} placeholder='Type a message here' onChange={changeGlobalMessage(this)} />
 
       </div>
     )
